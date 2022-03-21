@@ -1,0 +1,33 @@
+#################################################################################################################
+# The deployment for the application
+#################################################################################################################
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app2-deployment
+  namespace: app2
+spec:
+  selector:
+    matchLabels:
+      app: app2
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: app2
+    spec:
+      nodeSelector:
+        nodeType: application-node
+      containers:
+      - name: app2
+        image: cpolydorou/httpdselfsigned:latest
+        ports:
+        - containerPort: 9000
+        resources:
+          requests:
+            cpu: "800m"
+            memory: "512Mi"      
+          limits:
+            cpu: "800m"
+            memory: "512Mi"
