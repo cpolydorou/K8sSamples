@@ -19,7 +19,7 @@ param aksVMSizeSystemPool string = 'standard_b2ms'
 param aksNodeCountAppPool int = 1
 param aksVMSizeAppPool string = 'standard_b2ms'
 
-param aksNodeCountInfraPool int = 3
+param aksNodeCountInfraPool int = 1
 param aksVMSizeInfraPool string = 'standard_b8ms'
 // ---------- End - Parameters -------------
 

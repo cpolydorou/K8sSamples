@@ -50,7 +50,7 @@ module aks '../201-Kubernetes-AKS-001/aks.bicep' = {
     vNetName: vNet.outputs.vNetName
     vNetResourceGroupName: rgnetworking.name
     aksClusterManagedResourceGroupName: '${rgaks.name}-MC'
-    aksNodeCountAppPool: 2
+    aksNodeCountAppPool: 1
     aksNodeCountSystemPool: 1
     aksSubnetIdAppPool: '${vNet.outputs.vNetId}/subnets/AKSApp'
     aksSubnetIdSystemPool: '${vNet.outputs.vNetId}/subnets/AKSSystem'
