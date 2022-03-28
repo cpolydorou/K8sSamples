@@ -25,5 +25,8 @@ To deploy the environment execute the below steps in sequence.
 ## Important note
 in order to access the sample applications, you have to update your hosts files with the IP of the ingress. You can't just use the IP since NGINX uses the host header to distinguish between the sites.
 
+## Blog
+I've published a blog post that contains more detailed information on why and how to deploy NGINX. Take a look over [here](https://blog.cpolydorou.net/2022/03/using-nginx-and-ingress-controller-on.html).
+
 ## Deployment Status
 ![Build Status](https://vsrm.dev.azure.com/christospolydorou/_apis/public/Release/badge/a8001c7b-70d1-4fd4-b4b5-ab1a8bbbc570/1/1)
