@@ -8,14 +8,16 @@ targetScope = 'subscription'
 // Deployment location
 param location string = 'westeurope' 
 
-// ---------- Start - Variables --------------
-var resourceGroupNamePrefix = 'RG-NGINX-'
-// ---------- End - Variables ----------------
+// Resource Group Names
+param resourceGroupNamePrefix string = 'RG-NGINX-'
 
 // Resource names
 param vNetName string = 'vNet'
 param aksClusterName string = 'aks'
 // ---------- End - Parameters ---------------
+
+// ---------- Start - Variables --------------
+// ---------- End - Variables ----------------
 
 // ---------- Start - ResourceGroups ---------
 resource rgnetworking 'Microsoft.Resources/resourceGroups@2021-04-01' = {
