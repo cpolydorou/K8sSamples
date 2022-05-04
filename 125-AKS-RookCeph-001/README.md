@@ -19,3 +19,8 @@ To deploy the environment execute the below steps in sequence.
 ### Deploy the testing applications
 1. Apply the YAML files in the application directory ([201-K8s-Deployments/201-K8s-App-001/](https://github.com/cpolydorou/K8sSamples/tree/main/125-AKS-RookCeph-001/201-K8s-Deployments/201-K8s-App) with a sequence according to their file name.
 
+## Blog
+I've published a blog post that contains more detailed information on why and how to deploy Rook/Ceph. Take a look over [here](https://blog.cpolydorou.net/2022/05/high-performance-k8s-storage-with-rook.html).
+
+## Deployment Status
+![Build Status](https://vsrm.dev.azure.com/christospolydorou/_apis/public/Release/badge/a8001c7b-70d1-4fd4-b4b5-ab1a8bbbc570/2/2)
