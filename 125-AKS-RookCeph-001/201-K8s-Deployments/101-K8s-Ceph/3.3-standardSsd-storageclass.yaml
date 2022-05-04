@@ -1,0 +1,16 @@
+#################################################################################################################
+# The deployment for the storage class on Azure Standard SSD disks
+#################################################################################################################
+
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: standard-ssd
+provisioner: kubernetes.io/azure-disk
+parameters:
+  cachingmode: ReadOnly
+  kind: Managed
+  storageaccounttype: StandardSSD_LRS
+reclaimPolicy: Delete
+allowVolumeExpansion: true
+volumeBindingMode: WaitForFirstConsumer

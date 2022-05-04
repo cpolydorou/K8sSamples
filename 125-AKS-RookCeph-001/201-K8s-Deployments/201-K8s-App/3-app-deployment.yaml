@@ -1,0 +1,39 @@
+#################################################################################################################
+# The deployment for the application
+#################################################################################################################
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+  namespace: app
+spec:
+  selector:
+    matchLabels:
+      app: app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      nodeSelector:
+        nodeType: application-node
+      containers:
+      - name: app
+        image: httpd
+        ports:
+        - containerPort: 9000
+        resources:
+          requests:
+            cpu: "800m"
+            memory: "512Mi"      
+          limits:
+            cpu: "800m"
+            memory: "512Mi"        
+        volumeMounts:  
+        - mountPath: /home/myapp
+          name: ceph-data          
+      volumes:
+      - name: ceph-data
+        persistentVolumeClaim:
+          claimName: app-cephfs-pvc

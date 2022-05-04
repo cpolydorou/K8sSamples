@@ -1,0 +1,16 @@
+#################################################################################################################
+# The deployment for the rook storage Persistent Volume Claim
+#################################################################################################################
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: app-cephfs-pvc
+  namespace: app
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 3Gi
+  storageClassName: csi-cephfs
