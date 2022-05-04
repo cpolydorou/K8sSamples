@@ -8,9 +8,8 @@ targetScope = 'subscription'
 // Deployment location
 param location string = 'westeurope' 
 
-// ---------- Start - Variables --------------
-var resourceGroupNamePrefix = 'RG-RookCeph-'
-// ---------- End - Variables ----------------
+// Resource Group Name Prefix
+param resourceGroupNamePrefix string = 'RG-RookCeph-'
 
 // Resource names
 param vNetName string = 'vNet'
