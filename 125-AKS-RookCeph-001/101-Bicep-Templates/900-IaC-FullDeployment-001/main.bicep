@@ -56,6 +56,8 @@ module aks '../201-Kubernetes-AKS-001/aks.bicep' = {
     aksSubnetIdStoragePool: '${vNet.outputs.vNetId}/subnets/AKSStorage'
     aksVMSizeAppPool: 'Standard_B2ms'
     aksVMSizeSystemPool: 'Standard_B2ms'
+    aksNodeCountStoragePool: 3
+    aksVMSizeStoragePool: 'Standard_D4a_v4'
   }
   dependsOn: [
     vNet
