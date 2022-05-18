@@ -1,4 +1,4 @@
-# AKS-NGINX-001
+# AKS-NGINX-PrivateNetwork-001
 Source files to deploy an Azure AKS cluster and the NGINX ingress controller with private service.
 
 The deployment contains:
