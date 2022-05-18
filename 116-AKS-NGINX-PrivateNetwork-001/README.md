@@ -37,3 +37,6 @@ The Bicep deployment requires Owner level permission, since it grants access to 
 
 ## Deployment Status
 ![Build Status](https://vsrm.dev.azure.com/christospolydorou/_apis/public/Release/badge/a8001c7b-70d1-4fd4-b4b5-ab1a8bbbc570/4/4)
+
+## Blog
+I've published a blog post that contains more detailed information on why and how to deploy NGINX. Take a look over [here](https://blog.cpolydorou.net/2022/05/in-one-of-previous-posts-we-used-nginx.html).
