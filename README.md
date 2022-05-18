@@ -3,4 +3,5 @@ Sample code for K8s deployments.
 
 ## Contents
 * [115-AKS-NGINX-001](https://github.com/cpolydorou/K8sSamples/tree/main/115-AKS-NGINX-001): A project to demonstrate the deployment of AKS and NGINX as the ingress controller.
+* [116-AKS-NGINX-PrivateNetwork-001](https://github.com/cpolydorou/K8sSamples/tree/main/116-AKS-NGINX-PrivateNetwork-001): A project to demonstrate the deployment of AKS and NGINX as the ingress controller in a private network using private IP addresses.
 * [125-AKS-RookCeph-001](https://github.com/cpolydorou/K8sSamples/tree/main/125-AKS-RookCeph-001): A project to demonstrate the deployment of a Rook/Ceph cluster in AKS.
