@@ -1,0 +1,15 @@
+###################################################################################################################
+# Manually create a LoadBalancer service in a private network
+###################################################################################################################
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: internal-service
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+    service.beta.kubernetes.io/azure-load-balancer-internal-subnet: "AKSVIPs"
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
