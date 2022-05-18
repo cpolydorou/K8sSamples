@@ -2,7 +2,7 @@
 
 // ---------- Start - Parameters -------------
 param bastionHostName string = 'bastion'
-param bastionSubnetId string = '/subscriptions/f2459aa9-70ac-41eb-bf01-615022a86504/resourceGroups/RG-Presales-Catena-Networking/providers/Microsoft.Network/virtualNetworks/vNet-Catena/subnets/AzureBastionSubnet'
+param bastionSubnetId string
 param location string = 'westeurope'
 // ---------- End - Parameters ---------------
 
