@@ -77,6 +77,30 @@ resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
     }
   }
 }
+
+// Install Tools
+resource tools 'Microsoft.Compute/virtualMachines/extensions@2020-06-01' = {
+  parent: vm
+  name: 'tools-install'
+  location: location
+  properties: {
+    publisher: 'Microsoft.Azure.Extensions'
+    type: 'CustomScript'
+    typeHandlerVersion: '2.1'
+    autoUpgradeMinorVersion: true
+    settings: {
+      skipDos2Unix: false
+      fileUris: [
+        'https://raw.githubusercontent.com/cpolydorou/K8sSamples/main/117-AKS-NGINX-MultipleIngressControllers-001/101-Bicep-Templates/301-VirtualMachines-Management-001/Scripts/azurecli-install.sh'
+        'https://raw.githubusercontent.com/cpolydorou/K8sSamples/main/117-AKS-NGINX-MultipleIngressControllers-001/101-Bicep-Templates/301-VirtualMachines-Management-001/Scripts/helm-install.sh'
+        'https://raw.githubusercontent.com/cpolydorou/K8sSamples/main/117-AKS-NGINX-MultipleIngressControllers-001/101-Bicep-Templates/301-VirtualMachines-Management-001/Scripts/kubectl-install.sh'
+      ]
+    }
+    protectedSettings: {
+      commandToExecute: 'sh kubectl-install.sh && sh azurecli-install.sh && sh helm-install.sh'
+    }
+  }
+}
 // ---------- End - Resources ----------------
 
 // ---------- Start - Outputs ----------------
