@@ -30,3 +30,6 @@ To deploy the environment execute the below steps in sequence.
 
 ## Important note
 in order to access the sample applications, you have to update your hosts files with the IP of the ingress. You can't just use the IP since NGINX uses the host header to distinguish between the sites.
+
+## Blog
+I've published a blog post that contains more detailed information on why and how to deploy NGINX. Take a look over [here](https://blog.cpolydorou.net/2022/05/running-multiple-nginx-ingress.html).
