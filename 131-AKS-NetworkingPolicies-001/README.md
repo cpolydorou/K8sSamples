@@ -20,3 +20,6 @@ Use kubectl to apply the yaml file in each network policy directory.
 
 ## Testing
 To test the applied policies, connect to a pod and try to ping another pod. The image used allows ping and includes the ping utility.
+
+## Blog
+I've created a blog post related to this demo that is available [here](http://blog.cpolydorou.net/2022/06/controlling-network-access-in-aks-using.html)
