@@ -10,7 +10,7 @@ The deployment contains:
 To deploy the environment execute the below steps.
 
 ### AKS Deployment
-Execute the [101-Bicep-Templates/900-IaC-FullDeployment-001/deploy-manual.sh](https://github.com/cpolydorou/K8sSamples/blob/main/115-AKS-NGINX-001/101-Bicep-Templates/900-IaC-FullDeployment-001/deploy-manual.sh) script to deploy the vNet and AKS. Update the names of the resource groups in the [101-Bicep-Templates/900-IaC-FullDeployment-001/main.bicep](https://github.com/cpolydorou/K8sSamples/blob/main/115-AKS-NGINX-001/101-Bicep-Templates/900-IaC-FullDeployment-001/main.bicep) file.
+Execute the [101-Bicep-Templates/900-IaC-FullDeployment-001/deploy-manual.sh](https://github.com/cpolydorou/K8sSamples/blob/main/131-AKS-NetworkingPolicies-001/101-Bicep-Templates/900-IaC-FullDeployment-001/deploy.sh) script to deploy the vNet and AKS. Update the names of the resource groups in the [101-Bicep-Templates/900-IaC-FullDeployment-001/main.bicep](https://github.com/cpolydorou/K8sSamples/blob/main/131-AKS-NetworkingPolicies-001/101-Bicep-Templates/900-IaC-FullDeployment-001/main.bicep) file.
 
 ### Applications Deployment
 Use kubectl to apply the 1-namespace.yaml and 2-app-deployment.yaml files in each application deployment directory.
