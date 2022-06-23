@@ -1,0 +1,19 @@
+###################################################################################################################
+# The deployment of the network policy to deny all ingress traffic
+#
+# Ingress traffic is denied on all pods, from all pods of the cluster with the exception of the pods from a 
+# namespace that matches the labels
+###################################################################################################################
+
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: allow-prod
+  namespace: app-2
+spec:
+  podSelector: {}
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          env: prod

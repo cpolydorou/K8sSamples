@@ -1,0 +1,16 @@
+###################################################################################################################
+# The deployment of the network policy to deny all ingress traffic
+#
+# Ingress traffic is denied for all pods in the namespace, for all other pods (even in the same namespace)
+###################################################################################################################
+
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: default-deny-ingress
+  namespace: app-3
+spec:
+  podSelector: {}
+  policyTypes:
+  - Ingress

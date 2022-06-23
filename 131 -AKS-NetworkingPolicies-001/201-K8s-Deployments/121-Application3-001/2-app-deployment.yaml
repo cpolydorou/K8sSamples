@@ -1,0 +1,33 @@
+#################################################################################################################
+# The deployment for the application
+#################################################################################################################
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-3-deployment
+  namespace: app-3
+spec:
+  selector:
+    matchLabels:
+      app: app-3
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: app-3
+    spec:
+      nodeSelector:
+        nodeType: application-node
+      containers:
+      - name: netshoot
+        image: nicolaka/netshoot
+        command: ["/bin/bash"]
+        args: ["-c", "while true; do ping localhost; sleep 60;done"]
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "512Mi"      
+          limits:
+            cpu: "200m"
+            memory: "512Mi"
